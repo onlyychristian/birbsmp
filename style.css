@@ -68,6 +68,24 @@ nav a:hover {
   color: #bbb;
 }
 
+.platforms {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.platforms span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #0b1120;
+  color: #9dc7ff;
+  font-size: 14px;
+  border: 1px solid #1c2a4a;
+}
+
+
 .hero-content button {
   margin-top: 20px;
   padding: 14px 36px;
