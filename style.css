@@ -6,19 +6,22 @@
 }
 
 body {
-  background: #0b0f19;
+  background: #05070c;
   color: white;
 }
 
-header {
-  height: 100vh;
-  background: radial-gradient(circle at top, #1b2b4a, #05070c);
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0a1020, #020409);
+  display: flex;
+  flex-direction: column;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 25px 10%;
+  align-items: center;
+  padding: 20px 8%;
 }
 
 .logo {
@@ -26,8 +29,12 @@ header {
   font-size: 22px;
 }
 
+nav {
+  display: flex;
+  gap: 20px;
+}
+
 nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: #aaa;
 }
@@ -36,71 +43,108 @@ nav a:hover {
   color: white;
 }
 
-.hero {
-  text-align: center;
-  margin-top: 15vh;
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.hero h1 {
-  font-size: 64px;
+.hero-content {
+  flex: 1;
+  text-align: center;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(40px, 8vw, 72px);
   font-weight: 800;
 }
 
-.hero p {
+.hero-content p {
   margin: 15px 0;
   color: #bbb;
 }
 
-.hero button {
-  padding: 12px 30px;
+.hero-content button {
+  margin-top: 20px;
+  padding: 14px 36px;
   font-size: 16px;
   background: #4da6ff;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 15px;
 }
 
-.hero button:hover {
+.hero-content button:hover {
   background: #78b9ff;
 }
 
-#ip {
-  display: block;
-  margin-top: 10px;
+.ip {
+  margin-top: 12px;
   color: #6fb5ff;
 }
 
 section {
-  padding: 80px 10%;
+  padding: 80px 8%;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 40px;
+  font-size: 32px;
 }
 
-.cards {
+.feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
 
-.card {
-  background: #111827;
+.feature {
+  background: #0b1120;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 14px;
   text-align: center;
   font-size: 18px;
+  transition: transform .2s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
 }
 
 .join {
-  background: #0f172a;
+  background: #080d1a;
   text-align: center;
 }
 
 footer {
   padding: 30px;
   text-align: center;
-  color: #777;
+  color: #666;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    background: #0b1120;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
 }
