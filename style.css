@@ -12,7 +12,7 @@ body {
 
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(160deg, #0a1020, #020409);
+  background: url("assets/hero-bg.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -58,18 +58,19 @@ nav a:hover {
   justify-content: center;
 }
 
-.hero-content h1 {
-  font-size: clamp(40px, 8vw, 72px);
-  font-weight: 800;
+.hero-title {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto 10px;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,.6));
 }
 
 .hero-content p {
-  margin: 15px 0;
-  color: #bbb;
+  color: #ddd;
 }
 
 .platforms {
-  margin-top: 14px;
+  margin: 12px 0;
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -79,12 +80,11 @@ nav a:hover {
 .platforms span {
   padding: 6px 14px;
   border-radius: 20px;
-  background: #0b1120;
+  background: rgba(0,0,0,.4);
   color: #9dc7ff;
+  border: 1px solid rgba(255,255,255,.1);
   font-size: 14px;
-  border: 1px solid #1c2a4a;
 }
-
 
 .hero-content button {
   margin-top: 20px;
@@ -145,7 +145,6 @@ footer {
   color: #666;
 }
 
-/* Mobile */
 @media(max-width: 768px) {
   nav {
     position: absolute;
